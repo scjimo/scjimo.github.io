@@ -1,1 +1,3 @@
-
+badge1,badge1.png
+badge2,badge2.png
+badge3,badge3.png
