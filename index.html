@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>所属者一覧</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button id="summary-btn">Summary</button>
+    <button id="badge-details-btn">Badge Details</button>
+  </header>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="ユーザー検索">
+  </div>
+
+  <div id="member-list">
+    <!-- 名簿がここに表示される -->
+  </div>
+
+  <!-- Summary ポップアップ -->
+  <div id="summary-popup" class="popup">
+    <div class="popup-content">
+      <span class="close-button">&times;</span>
+      <h2>Summary</h2>
+      <p>合計人数: <span id="total-members">0</span></p>
+      <p>Master: <span id="master-count">0</span></p>
+      <p>Advanced: <span id="advanced-count">0</span></p>
+      <p>Good: <span id="good-count">0</span></p>
+      <p>バッジ所持者数: <span id="badge-holders">0</span></p>
+    </div>
+  </div>
+
+  <!-- Badge Details ポップアップ -->
+  <div id="badge-details-popup" class="popup">
+    <div class="popup-content">
+      <span class="close-button">&times;</span>
+      <h2>Badge Details</h2>
+      <!-- バッジ詳細情報をここに表示 -->
+      <p>バッジ詳細情報</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
