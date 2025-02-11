@@ -48,7 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // 名簿の表示
       displayMembers(membersData);
       updateSummary(membersData);
-    });
+    })
+    .catch(error => console.error('Error:', error));
 
   // 名簿の表示
   function displayMembers(members) {
@@ -110,5 +111,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
   closeButtonBadgeDetails.addEventListener('click', function() {
     badgeDetailsPopup.style.display = 'none';
+  });
+
+  // 背景クリックでポップアップを閉じる
+  document.addEventListener('click', function(event) {
+    if (event.target === summaryPopup) {
+      summaryPopup.style.display = 'none';
+    } else if (event.target === badgeDetailsPopup) {
+      badgeDetailsPopup.style.display = 'none';
+    }
   });
 });
